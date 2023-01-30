@@ -41,8 +41,9 @@ namespace SeleniumTest
         ///   1) Find and select a specific row in a table of search results given search criteria.
         ///   2) This method will automatically advance through paginated results until the end is reached.
         ///</summary>
-        ///<param name="locGridContainer">Selenium locator containing the grid</param>
-        ///<param name="busyIndicator">Selenium locator of the busy indicator</param>
+        ///<param name="Locators">Dictionary containing locators for important HTML items</param>
+        ///<param name="grid">Enumerated type corresponding to specific HTML table layout</param>
+        ///<param name="howToSelectRow"> Enumerated type corresponding to selection method</param>
         ///<param name="criteria">Criteria to find in a table row</param>
         ///<param name="blnAllTrue">all criteria must match if true, any one of criteria can match if false</param>
         public static bool GridSearch(this IWebDriver driver, Dictionary<string,By> Locators, gridType grid, inputType howToSelectRow, List<string> criteria, bool blnAllTrue)
